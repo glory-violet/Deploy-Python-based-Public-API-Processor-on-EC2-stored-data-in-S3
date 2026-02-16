@@ -84,9 +84,7 @@ bucket_name = 'your-s3-bucket-name'
 
 s3.upload_file(csv_file, bucket_name, csv_file)
 print(f"{csv_file} uploaded to S3 bucket {bucket_name} successfully!")
-
----
-
+```
 ---
 
 ## 🙏 Conclusion
