@@ -86,3 +86,10 @@ s3.upload_file(csv_file, bucket_name, csv_file)
 print(f"{csv_file} uploaded to S3 bucket {bucket_name} successfully!")
 
 ---
+
+---
+
+## 🙏 Conclusion
+This project demonstrates a complete workflow from public API data retrieval to cloud deployment using AWS EC2 and S3. It highlights hands-on skills in Python scripting, data processing with pandas, API integration, and secure cloud storage.  
+
+**Thank you for visiting this project!**
