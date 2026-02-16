@@ -1,21 +1,18 @@
 # Deploy-Python-based-Public-API-Processor-on-EC2-stored-data-in-S3
 
 ## 📌 Project Overview
-This project demonstrates a Python-based application that fetches data from a public REST API, processes JSON responses using pandas, and stores the processed output in AWS cloud storage.
-
-
-The application is deployed on an AWS EC2 instance and securely stores generated data files in Amazon S3.
+This project demonstrates a Python-based application that fetches data from a public REST API, processes JSON responses using pandas, and stores the processed output in AWS cloud storage S3.
 
 ---
 
 ## 🚀 Technologies Used
-- Python --- Used as the primary programming language to fetch data from APIs, process JSON, and manage data workflows. Simple, versatile, and widely used for scripting and data tasks.
-- requests --- A Python library used to make HTTP calls to public APIs. It allows fetching data from REST APIs in a simple way.
-- pandas --- A Python library used to make HTTP calls to public APIs. It allows fetching data from REST APIs in a simple way.
-- AWS EC2 --- Used for organizing, processing, and analyzing structured data. Converts API JSON responses into DataFrames, handles datetime conversion, and prepares data for plotting or storage.
-- Amazon S3 --- Provides a virtual server to deploy the Python application. Enables running scripts continuously or on-demand in the cloud.
-- IAM --- AWS Identity and Access Management ensures secure access to EC2 and S3. It allows defining roles and permissions so the Python script can upload files to S3 safely.
-- Linux ---The operating system on which EC2 instance runs. Provides a stable environment to run Python scripts, manage files, and deploy applications.
+- **Python** – Primary language for fetching API data, processing JSON, and managing data workflows.  
+- **requests** – Python library to make HTTP calls to public APIs. Fetches real-time data in a simple and structured way.  
+- **pandas** – Used to organize, process, and analyze data. Converts JSON responses into DataFrames, handles datetime conversion, and prepares data for plotting or storage.  
+- **AWS EC2** – Virtual server to deploy the Python application. Enables running scripts continuously or on-demand in the cloud.  
+- **Amazon S3** – Cloud storage for securely storing processed CSV/output files. Ensures persistent storage and easy access.  
+- **IAM** – AWS Identity and Access Management ensures secure access to EC2 and S3. Defines roles and permissions so Python script can safely upload files.  
+- **Linux** – Operating system for the EC2 instance. Provides a stable environment to run Python scripts, manage files, and deploy applications.
 
 ---
 
