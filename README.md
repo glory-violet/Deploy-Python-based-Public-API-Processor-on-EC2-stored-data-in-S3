@@ -30,14 +30,7 @@ The application is deployed on an AWS EC2 instance and securely stores generated
 - Converted datetime fields and performed basic inspection.
 - Generated processed output as a CSV file.
 
-### 3️⃣ Cloud Deployment
-- Deployed the Python application on an AWS EC2 instance.
-- Configured IAM roles for secure access to AWS resources.
-- Uploaded processed output files to Amazon S3.
-
----
-
-#### 🔹 Code Example (Jupyter Notebook)
+#### 🔹 Python Code Example (Jupyter Notebook)
 ```python
 import requests
 import pandas as pd
@@ -78,13 +71,21 @@ temp_df.head()
 # Step 7: Plot Temperature Data
 temp_df.set_index("Datetime").plot()
 
+### 3️⃣ Cloud Deployment
+- Deployed the Python application on an AWS EC2 instance.
+- Configured IAM roles for secure access to AWS resources.
+- Uploaded processed output files to Amazon S3.
 
-## 🎯 Key Outcomes
-- Demonstrated API integration and JSON parsing.
-- Applied data processing using pandas.
-- Gained hands-on experience with AWS EC2 deployment.
-- Implemented secure cloud storage using S3.
+#### 🔹 Cloud Code Example (Python script running on EC2)
+# Step 1: Save DataFrame to CSV locally on EC2
+csv_file = "temperature_data.csv"
+temp_df.to_csv(csv_file, index=False)
+
+# Step 2: Upload CSV to S3
+s3 = boto3.client('s3')
+bucket_name = 'your-s3-bucket-name'
+
+s3.upload_file(csv_file, bucket_name, csv_file)
+print(f"{csv_file} uploaded to S3 bucket {bucket_name} successfully!")
 
 ---
-
-## 📎 Repository Structure
