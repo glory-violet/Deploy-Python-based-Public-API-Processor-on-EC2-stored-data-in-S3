@@ -37,6 +37,48 @@ The application is deployed on an AWS EC2 instance and securely stores generated
 
 ---
 
+#### 🔹 Code Example (Jupyter Notebook)
+```python
+import requests
+import pandas as pd
+import matplotlib
+import json
+
+# Step 1: Call Public API
+url = "https://api.weather.gov/points/39.7456,-97.0892"
+response = requests.get(url)
+response.json()
+
+# Step 2: Call hourly forecast API
+url = 'https://api.weather.gov/gridpoints/TOP/32,81/forecast/hourly'
+response = requests.get(url)
+response.json()
+
+# Step 3: Parse JSON response into Python dictionaries/lists
+periods = response.json()["properties"]["periods"]
+
+# Step 4: Extract temperature with timestamp
+temp_dict = {}
+for period in periods:
+    temp_dict[period["startTime"]] = period['temperature']
+temp_dict
+
+# Step 5: Create pandas DataFrame
+temp_df = (
+    pd.DataFrame({
+        "Datetime": temp_dict.keys(),
+        "Temperature (F)": temp_dict.values()
+    })
+)
+
+# Step 6: Convert Datetime strings
+temp_df["Datetime"] = pd.to_datetime(temp_df["Datetime"])
+temp_df.head()
+
+# Step 7: Plot Temperature Data
+temp_df.set_index("Datetime").plot()
+
+
 ## 🎯 Key Outcomes
 - Demonstrated API integration and JSON parsing.
 - Applied data processing using pandas.
