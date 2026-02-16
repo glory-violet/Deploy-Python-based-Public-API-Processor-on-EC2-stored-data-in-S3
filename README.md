@@ -9,13 +9,13 @@ The application is deployed on an AWS EC2 instance and securely stores generated
 ---
 
 ## 🚀 Technologies Used
-- Python
-- requests
-- pandas
-- AWS EC2
-- Amazon S3
-- IAM
-- Linux
+- Python --- Used as the primary programming language to fetch data from APIs, process JSON, and manage data workflows. Simple, versatile, and widely used for scripting and data tasks.
+- requests --- A Python library used to make HTTP calls to public APIs. It allows fetching data from REST APIs in a simple way.
+- pandas --- A Python library used to make HTTP calls to public APIs. It allows fetching data from REST APIs in a simple way.
+- AWS EC2 --- Used for organizing, processing, and analyzing structured data. Converts API JSON responses into DataFrames, handles datetime conversion, and prepares data for plotting or storage.
+- Amazon S3 --- Provides a virtual server to deploy the Python application. Enables running scripts continuously or on-demand in the cloud.
+- IAM --- AWS Identity and Access Management ensures secure access to EC2 and S3. It allows defining roles and permissions so the Python script can upload files to S3 safely.
+- Linux ---The operating system on which EC2 instance runs. Provides a stable environment to run Python scripts, manage files, and deploy applications.
 
 ---
 
